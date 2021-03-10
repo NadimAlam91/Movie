@@ -1,0 +1,22 @@
+<h1>MovieList</h1>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">MovieName</th>
+        <th scope="col">MovieReleaseDate</th>
+        <th scope="col">MovieUpvoteCount</th>
+        <th scope="col">MovieUpvote</th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let x of collection">
+        <td>{{x.id}}</td>
+        <td>{{x.MovieName}}</td>
+        <td>{{x.MovieReleaseDate | date:'short'}}</td>
+        <td>{{x.MovieUpvote}}</td>
+        <th><button  type="button" (click)="Upvote(x.id)" class="btn btn-outline-primary">Like</button></th>
+      </tr>
+    </tbody>
+  </table>
+  
